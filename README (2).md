@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>最後の晩餐 | 狭間書房</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0e0e0e;
+      color: #f2f2f2;
+      font-family: "Hiragino Mincho ProN", "MS Mincho", serif;
+      line-height: 1.9;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3em 2em;
+    }
+    h1 {
+      font-size: 2.4em;
+      text-align: center;
+      margin-bottom: 1em;
+      letter-spacing: 0.08em;
+      border-bottom: 2px solid #444;
+      padding-bottom: 0.4em;
+    }
+    .image {
+      text-align: center;
+      margin: 2em 0;
+    }
+    .image img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #333;
+    }
+    p, ul {
+      margin: 1.2em 0;
+    }
+    .center {
+      text-align: center;
+      font-size: 1.5em;
+    }
+    .spacer {
+      height: 3000px; /* GAME CLEARをもーーっと下にするための余白 */
+    }
+    .spacer2 {
+      height: 200px; /* GAME CLEARをもーーっと下にするための余白 */
+    }
+    .final-section {
+      margin-top: 5em;
+      text-align: center;
+    }
+    .final-section h2 {
+      font-size: 2em;
+      color: #e63946;
+      margin-bottom: 1em;
+    }
+    .survey-link {
+      display: inline-block;
+      margin-top: 2em;
+      font-size: 1.2em;
+      color: #32a9cd;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .survey-link:hover {
+      color: #66d9ff;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>絵画『最後の晩餐』</h1>
+
+  <div class="image">
+      <img src="gazou/last" alt="最後の晩餐">
+    </div>
+
+  <p><strong>制作年：</strong>1495年〜1498年頃<br>
+       <strong>作者：</strong>レオナルド・ダ・ヴィンチ（1452年 - 1519年 享年67歳）<br>
+       <strong>所蔵：</strong>イタリア・ミラノ、サンタ・マリア・デッレ・グラツィエ修道院<br>
+       <strong>技法：</strong>油彩とテンペラを組み合わせた独自技法<br>
+       <strong>世界文化遺産：</strong>1980年登録</p>
+  <div class="spacer2"></div>
+  <div class="center">
+      <p>約460cm × 約880cmの大規模な壁画でありながら、<br>キリストを中心とした直線的な線遠近法を用いて奥行きを描き出しており、<br>
+      天井の格子や壁の線が観者を場面の中へ吸い込むような構図となっている。</p><br>
+
+  <p>この絵画は、新約聖書「ヨハネによる福音書」13章の場面を描いている。<br>
+      イエス・キリストが処刑前夜、12人の弟子と食卓を囲むペサハ（過越祭）の場面である。</p><br>
+
+  <p>弟子は左からバルトロマイ、小ヤコブ、アンドレ、ペテロ、イスカリオテのユダ、ヨハネ、<br>イエス・キリスト、大ヤコブ、トマス、フィリポ、マタイ、タダイ、シモン。</p><br>
+
+  <p>「この中に裏切り者がいる。」<br><br><br>というキリストの発言により使徒たちが動揺する瞬間が描かれている。<br>
+      裏切り者は左から5番目のイスカリオテのユダであり、手には銀貨の袋を握っている。</p><br><br><br><br><br>
+
+  <p>キリストはユダの裏切りによってローマ帝国に囚われ、ゴルゴダの丘で十字架刑に処され、<br>
+      その3日後に死からよみがえったとされている。</p>
+    </div>
+
+  <div class="spacer"></div>
+
+  <div class="final-section">
+      <h2>―― GAME CLEAR ――</h2>
+      <img src="gazou/limi" alt="limi"><br>
+      <p>助けてくれて、ありがとう。</p>
+      <a href="https://example.com/survey" class="survey-link">▶ アンケートに回答する</a>
+    </div>
+  </div>
+</body>
+</html>
