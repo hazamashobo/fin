@@ -2,125 +2,339 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>最後の晩餐 | 狭間書房</title>
   <style>
-    body {
+    * {
       margin: 0;
-      background: #0e0e0e;
-      color: #f2f2f2;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+      color: #e8e8e8;
       font-family: "Hiragino Mincho ProN", "MS Mincho", serif;
       line-height: 1.9;
+      min-height: 100vh;
     }
+
+    .spacer-top {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .intro-text {
+      text-align: center;
+      font-size: 1.05em;
+      letter-spacing: 0.05em;
+      color: #d0d0d0;
+      line-height: 2;
+      animation: fadeIn 0.8s ease-in;
+    }
+
     .container {
-      max-width: 900px;
+      max-width: 850px;
       margin: 0 auto;
-      padding: 3em 2em;
+      padding: 4em 2em;
     }
+
     h1 {
-      font-size: 2.4em;
+      font-size: 2.8em;
       text-align: center;
-      margin-bottom: 1em;
-      letter-spacing: 0.08em;
-      border-bottom: 2px solid #444;
-      padding-bottom: 0.4em;
+      margin-bottom: 2em;
+      letter-spacing: 0.12em;
+      color: #fff;
+      position: relative;
+      padding-bottom: 1.2em;
     }
-    .image {
+
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #e63946, transparent);
+    }
+
+    .image-container {
       text-align: center;
-      margin: 2em 0;
+      margin: 3em 0;
+      animation: slideUp 0.8s ease-out 0.2s both;
     }
-    .image img {
+
+    .image-container img {
       max-width: 100%;
       height: auto;
       border: 1px solid #333;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+      transition: transform 0.3s ease;
     }
-    .image2 img {
-      max-width: 50%;
-      height: auto;
-      border: 1px solid #333;
+
+    .image-container img:hover {
+      transform: scale(1.02);
     }
-    p, ul {
-      margin: 1.2em 0;
+
+    .info-section {
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 3px solid #e63946;
+      padding: 2em;
+      margin: 2em 0;
+      border-radius: 4px;
+      backdrop-filter: blur(10px);
     }
-    .center {
+
+    .info-section p {
+      margin: 0.8em 0;
+      font-size: 0.95em;
+    }
+
+    .info-label {
+      font-weight: bold;
+      color: #fff;
+      display: inline-block;
+      min-width: 120px;
+    }
+
+    .highlight {
+      color: #ff6b7a;
+      font-weight: 500;
+    }
+
+    .description-text {
+      font-size: 1.02em;
+      line-height: 2;
+      margin: 2.5em 0;
+      color: #d8d8d8;
       text-align: center;
-      font-size: 1em;
+      letter-spacing: 0.03em;
     }
-    .spacer {
-      height: 4500px; /* GAME CLEARをもーーっと下にするための余白 */
+
+    .apostles-list {
+      padding: 1.5em;
+      margin: 2em 0;
+      color: #d0d0d0;
+      line-height: 1.8;
+      text-align: center;
     }
-    .spacer2 {
-      height: 200px; 
+
+    .quote-section {
+      text-align: center;
+      font-size: 1.1em;
+      margin: 3em 0;
+      padding: 2em;
+      color: #b8b8b8;
+      line-height: 2.2;
+      letter-spacing: 0.02em;
     }
+
+    .spacer-middle {
+      height: 100px;
+    }
+
     .final-section {
-      margin-top: 5em;
+      margin-top: 6em;
+      padding: 4em 2em;
       text-align: center;
+      background: rgba(230, 57, 70, 0.1);
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+      animation: fadeIn 1s ease-in 0.5s both;
     }
+
     .final-section h2 {
-      font-size: 2em;
-      color: #e63946;
+      font-size: 3.5em;
+      color: #ff6b7a;
       margin-bottom: 1em;
+      letter-spacing: 0.2em;
+      font-weight: normal;
+      text-shadow: 0 0 30px rgba(230, 57, 70, 0.6), 0 8px 30px rgba(230, 57, 70, 0.3);
+      animation: glow 2s ease-in-out infinite;
     }
+
+    .final-section h2::before {
+      content: '✦ ✦ ';
+      margin-right: 0.4em;
+      font-size: 0.7em;
+    }
+
+    .final-section h2::after {
+      content: ' ✦ ✦';
+      margin-left: 0.4em;
+      font-size: 0.7em;
+    }
+
+    .final-image {
+      margin: 2em 0;
+    }
+
+    .final-image img {
+      max-width: 200px;
+      height: auto;
+      filter: drop-shadow(0 8px 20px rgba(230, 57, 70, 0.3));
+    }
+
+    .thanks-text {
+      font-size: 1.1em;
+      margin: 1.5em 0;
+      color: #d0d0d0;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-top: 2.5em;
+      align-items: center;
+    }
+
     .survey-link {
       display: inline-block;
-      margin-top: 2em;
-      font-size: 1.2em;
-      color: #32a9cd;
-      text-decoration: underline;
+      padding: 1em 2.5em;
+      font-size: 1em;
+      color: #fff;
+      text-decoration: none;
+      background: linear-gradient(135deg, #e63946, #ff6b7a);
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      letter-spacing: 0.05em;
+      box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
       cursor: pointer;
+      width: 280px;
+      text-align: center;
     }
+
     .survey-link:hover {
-      color: #66d9ff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(230, 57, 70, 0.6);
     }
-    
+
+    .survey-link::before {
+      content: '▶ ';
+      margin-right: 0.5em;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        text-shadow: 0 0 30px rgba(230, 57, 70, 0.6), 0 8px 30px rgba(230, 57, 70, 0.3);
+      }
+      50% {
+        text-shadow: 0 0 50px rgba(230, 57, 70, 0.8), 0 8px 40px rgba(230, 57, 70, 0.5), 0 0 20px rgba(255, 107, 122, 0.6);
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .final-section h2 {
+        font-size: 1.8em;
+      }
+
+      .container {
+        padding: 2em 1.5em;
+      }
+
+      .info-section {
+        padding: 1.5em;
+      }
+
+      .survey-link {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="spacer2"></div>
-   <div class="center">
-      <p>あなたは専用のフォームから狭間の空間に閉じ込められている桐須に<br>
-      ドアの写真を送った。</p>
+  <div class="spacer-top">
+    <div class="intro-text">
+      <p>あなたは専用のフォームから狭間の空間に閉じ込められている枝條に<br>ドアの写真を送った。</p>
+    </div>
   </div>
 
-  <div class="spacer"></div>
   <div class="container">
-    <h1>『最後の晩餐』</h1>
+    <h1>最後の晩餐</h1>
 
-  <div class="image">
+    <div class="image-container">
       <img src="gazou/last.jpg" alt="最後の晩餐">
     </div>
 
-  <p><strong>制作年：</strong>1495年〜1498年頃<br>
-       <strong>作者：</strong><span style="color: #e63946;">レオ</span>ナルド・ダ・ヴィンチ（1452年 - 1519年 享年<span style="color: #e63946;">67</span>歳）<br>
-       <strong>所蔵：</strong>イタリア・ミラノ、<span style="color: #e63946;">サンタ・マリア</span>・デッレ・グラツィエ修道院<br>
-       <strong>技法：</strong>油彩とテンペラを組み合わせた独自技法<br>
-       <strong>世界文化遺産：</strong>1980年登録</p>
-  <div class="spacer2"></div>
-  <div class="center">
-      <p>約460cm × 約880cmの大規模な壁画でありながら、<br>キリストを中心とした直線的な<span style="color: #e63946;">線遠近法</span>を用いて奥行きを描き出しており、<br>
-      天井の格子や壁の線が観者を場面の中へ吸い込むような構図となっている。</p><br>
-
-  <p>この絵画は、新約聖書「ヨハネによる福音書」13章の場面を描いている。<br>
-      イエス・キリストが処刑前夜、12人の弟子と食卓を囲む<br>ペサハ（<span style="color: #e63946;">過越祭</span>）の場面である。</p><br>
-
-  <p>弟子は左から<span style="color: #e63946;">バルトロマイ、小ヤコブ、アンドレ、ペテロ、<br>イスカリオテのユダ、ヨハネ、イエス・キリスト、<br>大ヤコブ、トマス、フィリポ、マタイ、タダイ、シモン。</span></p><br>
-
-  <p>「この中に裏切り者がいる。」<br><br><br>というキリストの発言により使徒たちが動揺する瞬間が描かれている。<br>
-      裏切り者は左から5番目のイスカリオテの<span style="color: #e63946;">ユダ</span>であり、<br>手には銀貨の袋を握っている。</p><br><br><br><br><br>
-
-  <p>キリストはユダの裏切りによってローマ帝国に囚われ、<br><span style="color: #e63946;">ゴルゴタの丘</span>で十字架刑に処される。<br>
-      しかし、その3日後に死からよみがえったとされている。</p>
+    <div class="info-section">
+      <p><span class="info-label">制作年：</span>1495年～1498年頃</p>
+      <p><span class="info-label">作者：</span><span class="highlight">レオナルド・ダ・ヴィンチ</span>（1452年 - 1519年 享年<span class="highlight">67</span>歳）</p>
+      <p><span class="info-label">所蔵：</span>イタリア・ミラノ、<span class="highlight">サンタ・マリア・デッレ・グラツィエ</span>修道院</p>
+      <p><span class="info-label">技法：</span>油彩とテンペラを組み合わせた独自技法</p>
+      <p><span class="info-label">世界文化遺産：</span>1980年登録</p>
     </div>
 
-  <div class="spacer"></div>
+    <div class="description-text">
+      <p>約460cm × 約880cmの大規模な壁画でありながら、<br>キリストを中心とした直線的な<span class="highlight">線遠近法</span>を用いて奥行きを表現しており、<br>天井の格子や壁の線が観者を場面の中へ吸い込むような構図となっている。</p>
+    </div>
+
+    <p style="text-align: center; color: #d0d0d0; margin: 2.5em 0; line-height: 2;">
+      この絵画は、新約聖書「ヨハネによる福音書」13章の場面を描いており、<br>
+      イエス・キリストが処刑前夜、12人の弟子と食事を囲む<br><span class="highlight">ペサハ</span>（過越祭）の場面である。
+    </p>
+
+    <div class="apostles-list">
+      <p>弟子は左から<span class="highlight">バルトロマイ、小ヤコブ、アンドレ、ペテロ、<br>
+      イスカリオテのユダ、ヨハネ、イエス・キリスト、<br>
+      大ヤコブ、トマス、フィリポ、マタイ、タダイ、シモン。</span></p>
+    </div>
+
+    <div class="quote-section">
+      <p>「この中に裏切り者がいる。」<br><br>
+      <span style="color: #999;">というキリストの発言により使徒たちが動揺する瞬間が描かれている。</span><br><br>
+      裏切り者は左から5番目の<span class="highlight">イスカリオテのユダ</span>であり、<br>
+      手には銀貨の袋を握っている。
+      </p>
+    </div>
+
+    <div class="spacer-middle"></div>
+
+    <p style="text-align: center; color: #d0d0d0; margin: 3em 0; line-height: 2; font-size: 1em;">
+      キリストはユダの裏切りによってローマ帝国に捕われ、<br>
+      <span class="highlight">ゴルゴタの丘</span>で十字架刑に処せられる。<br>
+      しかし、その3日後に死からよみがえったとされている。
+    </p>
+  </div>
 
   <div class="final-section">
-      <h2>―― GAME CLEAR ――</h2>
-    <div class="image2">
-      <img src="gazou/limi.png" alt="limi"><br>
+    <h2>GAME CLEAR</h2>
+    <div class="final-image">
+      <img src="gazou/limi.png" alt="limi">
     </div>
-      <p>助けてくれて、ありがとう。</p>
-      <a href="https://hazamashobo.github.io/atogaki/" class="survey-link">▶ あとがきを読む</a><br>
-      <a href="https://forms.gle/z9D798S46MniKjPVA" class="survey-link">▶ アンケートに回答する</a>
+    <p class="thanks-text">助けてくれて、ありがとう。</p>
+    <div class="button-group">
+      <a href="https://hazamashobo.github.io/atogaki/" class="survey-link">あとがきを読む</a>
+      <a href="https://forms.gle/z9D798S46MniKjPVA" class="survey-link">アンケートに回答する</a>
     </div>
   </div>
 </body>
