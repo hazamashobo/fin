@@ -25,12 +25,22 @@
       align-items: center;
       justify-content: center;
     }
+
+    .intro-text {
       text-align: center;
       font-size: 1.05em;
       letter-spacing: 0.05em;
       color: #d0d0d0;
       line-height: 2;
       animation: fadeIn 0.8s ease-in;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .spacer-long {
+      height: 8000px;
+      max-width: 850px;
+      margin: 0 auto;
     }
 
     .container {
@@ -90,13 +100,14 @@
     .info-section p {
       margin: 0.8em 0;
       font-size: 0.95em;
+      display: flex;
+      gap: 0;
     }
 
     .info-label {
       font-weight: bold;
       color: #fff;
-      display: inline-block;
-      min-width: 120px;
+      display: block;
     }
 
     .highlight {
@@ -169,7 +180,7 @@
     }
 
     .final-image img {
-      max-width: 200px;
+      max-width: 400px;
       height: auto;
       filter: drop-shadow(0 8px 20px rgba(230, 57, 70, 0.3));
     }
@@ -270,7 +281,7 @@
 <body>
   <div class="spacer-top">
     <div class="intro-text">
-      <p>あなたは専用のフォームから狭間の空間に閉じ込められている桐須にドアの写真を送った。</p>
+      <p>あなたは専用のフォームから狭間の空間に閉じ込められている枝條に<br>ドアの写真を送った。</p>
     </div>
   </div>
 
@@ -284,7 +295,7 @@
     </div>
 
     <div class="info-section">
-      <p><span class="info-label">制作年：</span>1495年～1498年頃</p>
+      <p><span class="info-label">制作年：1495年～1498年頃</span></p>
       <p><span class="info-label">作者：</span><span class="highlight">レオナルド・ダ・ヴィンチ</span>（1452年 - 1519年 享年<span class="highlight">67</span>歳）</p>
       <p><span class="info-label">所蔵：</span>イタリア・ミラノ、<span class="highlight">サンタ・マリア・デッレ・グラツィエ</span>修道院</p>
       <p><span class="info-label">技法：</span>油彩とテンペラを組み合わせた独自技法</p>
@@ -301,7 +312,9 @@
     </p>
 
     <div class="apostles-list">
-      <p>弟子は左から<span class="highlight">バルトロマイ、小ヤコブ、アンドレ、ペテロ、イスカリオテのユダ、ヨハネ、イエス・キリスト、大ヤコブ、トマス、フィリポ、マタイ、タダイ、シモン。</span></p>
+      <p>弟子は左から<span class="highlight">バルトロマイ、小ヤコブ、アンドレ、ペテロ、<br>
+      イスカリオテのユダ、ヨハネ、イエス・キリスト、<br>
+      大ヤコブ、トマス、フィリポ、マタイ、タダイ、シモン。</span></p>
     </div>
 
     <div class="quote-section">
