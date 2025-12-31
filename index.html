@@ -100,14 +100,13 @@
     .info-section p {
       margin: 0.8em 0;
       font-size: 0.95em;
-      display: flex;
-      gap: 0;
+      display: block;
     }
 
     .info-label {
       font-weight: bold;
       color: #fff;
-      display: block;
+      display: inline;
     }
 
     .highlight {
@@ -164,14 +163,14 @@
     }
 
     .final-section h2::before {
-      content: '✦ ✦ ';
-      margin-right: 0.4em;
+      content: '';
+      margin-right: 0;
       font-size: 0.7em;
     }
 
     .final-section h2::after {
-      content: ' ✦ ✦';
-      margin-left: 0.4em;
+      content: '';
+      margin-left: 0;
       font-size: 0.7em;
     }
 
@@ -281,7 +280,7 @@
 <body>
   <div class="spacer-top">
     <div class="intro-text">
-      <p>あなたは専用のフォームから狭間の空間に閉じ込められている桐須にドアの写真を送った。</p>
+      <p>あなたは専用のフォームから狭間の空間に閉じ込められている枝條に<br>ドアの写真を送った。</p>
     </div>
   </div>
 
@@ -307,7 +306,7 @@
     </div>
 
     <p style="text-align: center; color: #d0d0d0; margin: 2.5em 0; line-height: 2;">
-      この絵画は、新約聖書「ヨハネによる福音書」13章の場面を描いており、<br>
+      この絵画は、新約聖書「ヨハネによる福音書」13章の場面を描いており、
       イエス・キリストが処刑前夜、12人の弟子と食事を囲む<br><span class="highlight">ペサハ</span>（過越祭）の場面である。
     </p>
 
@@ -318,9 +317,9 @@
     </div>
 
     <div class="quote-section">
-      <p>「この中に裏切り者がいる。」<br><br>
+      <p>「この中に裏切り者がいる。」<br>
       <span style="color: #999;">というキリストの発言により使徒たちが動揺する瞬間が描かれている。</span><br><br>
-      裏切り者は左から5番目の<span class="highlight">イスカリオテのユダ</span>であり、<br>
+      裏切り者は左から5番目の<span class="highlight">イスカリオテのユダ</span>であり、
       手には銀貨の袋を握っている。
       </p>
     </div>
@@ -333,7 +332,7 @@
       しかし、その3日後に死からよみがえったとされている。
     </p>
   </div>
-
+  <div class="spacer-long"></div>
   <div class="final-section">
     <h2>GAME CLEAR</h2>
     <div class="final-image">
