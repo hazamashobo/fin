@@ -17,8 +17,7 @@ body {
   font-family: "Hiragino Mincho ProN", "MS Mincho", serif;
   line-height: 1.9;
   min-height: 100vh;
-  padding: 0;
-  margin: 0;
+  padding: 0 20px;
 }
 
 .spacer-top {
@@ -83,19 +82,22 @@ body {
       background: linear-gradient(90deg, transparent, #e63946, transparent);
     }
 
-    .image-container {
-      text-align: center;
-      margin: 3em 0;
-      animation: slideUp 0.8s ease-out 0.2s both;
-    }
+.image-container {
+  text-align: center;
+  margin: 3em 0;
+  animation: slideUp 0.8s ease-out 0.2s both;
+  padding: 0;
+}
 
-    .image-container img {
-      max-width: 100%;
-      height: auto;
-      border: 1px solid #333;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
-      transition: transform 0.3s ease;
-    }
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #333;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
 
     .image-container img:hover {
       transform: scale(1.02);
@@ -187,9 +189,16 @@ body {
       font-size: 0.7em;
     }
 
-    .final-image {
-      margin: 2em 0;
-    }
+.final-image {
+  margin: 2em 0;
+  text-align: center;
+}
+
+.final-image img {
+  max-width: 400px;
+  height: auto;
+  filter: drop-shadow(0 8px 20px rgba(230, 57, 70, 0.3));
+}
 
     .final-image img {
       max-width: 400px;
@@ -267,10 +276,13 @@ body {
     }
 
     @media (max-width: 768px) {
-      h1 {
-        font-size: 2em;
-      }
+  body {
+    padding: 0 15px;
+  }
 
+  h1 {
+    font-size: 2em;
+  }
       .final-section h2 {
         font-size: 1.8em;
       }
@@ -287,6 +299,10 @@ body {
         width: 100%;
         max-width: 280px;
       }
+       .final-image img {
+    max-width: 100%;
+  }
+}
     }
   </style>
 </head>
